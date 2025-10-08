@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thành viên 1 - Trịnh Hồ Minh Thắng</title>
+        <link rel="stylesheet" href="../../default.css" />
+    </head>
+    <body>
+        <div class="rings"></div>
+        <div class="orbs">
+            <div class="orb o1"></div>
+            <div class="orb o2"></div>
+            <div class="orb o3"></div>
+            <div class="orb o4"></div>
+            <div class="orb o5"></div>
+        </div>
+        <div class="watermark">FIT HCMUS · CTT5</div>
+        <div class="binary" aria-hidden="true"></div>
+        <header class="navbar">
+            <div class="brand nowrap">
+                <div class="logo"></div>
+                <div>
+                    <h1>Trịnh Hồ Minh Thắng</h1>
+                    <h2>Thành viên nhóm Đẳng cấp Website</h2>
+                </div>
+            </div>
+        </header>
+
+        <main class="container fade-container" id="page">
+            <div class="breadcrumbs">Đẳng cấp Website / Thành viên 2</div>
+            <section class="card profile">
+                <img
+                    class="avatar"
+                    src="images/23120354.jpg"
+                    alt="Ảnh Trịnh Hồ Minh Thắng"
+                />
+                <div>
+                    <h2>Thông tin cá nhân</h2>
+                    <ul class="info-list">
+                        <li><strong>Họ và tên:</strong>Trịnh Hồ Minh Thắng</li>
+                        <li><strong>Mã số sinh viên:</strong> 23120354</li>
+                        <li><strong>Ngày sinh:</strong> 21/12/2005</li>
+                        <li>
+                            <strong>Email:</strong>
+                            23120354@student.hcmus.edu.vn
+                        </li>
+                        <li><strong>Số điện thoại:</strong> 0355 010 894</li>
+                        <li>
+                            <a class="btn" href="../../default.html"
+                                >Về trang thông tin chung</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="mt-12 text-muted">
+                        Sinh viên năm ba yêu thích lập trình Web và thiết kế UI.
+                        Mục tiêu là trở thành Frontend Engineer.
+                    </p>
+                    <div class="tag-row mt-6">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Figma</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            window.addEventListener("DOMContentLoaded", function () {
+                var container = document.getElementById("page");
+                requestAnimationFrame(function () {
+                    container.classList.add("ready");
+                });
+                document.querySelectorAll("a").forEach(function (a) {
+                    var href = a.getAttribute("href");
+                    if (
+                        !href ||
+                        href.startsWith("#") ||
+                        href.startsWith("mailto:") ||
+                        href.startsWith("tel:")
+                    )
+                        return;
+                    a.addEventListener("click", function (e) {
+                        if (e.ctrlKey || e.metaKey) return;
+                        e.preventDefault();
+                        container.classList.remove("ready");
+                        setTimeout(function () {
+                            window.location.href = href;
+                        }, 220);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đẳng cấp website</title>
+    <link rel="stylesheet" href="default.css" />
+    <meta name="theme-color" content="#0f1220" />
+  </head>
+  <body>
+    <div class="rings"></div>
+    <div class="orbs">
+      <div class="orb o1"></div>
+      <div class="orb o2"></div>
+      <div class="orb o3"></div>
+      <div class="orb o4"></div>
+      <div class="orb o5"></div>
+    </div>
+    <header class="navbar">
+      <div class="brand nowrap">
+        <div>
+          <h1 class="site-title">Đẳng cấp Website</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="container fade-container" id="page">
+      <section class="grid">
+        <div class="card">
+          <div class="img-frame">
+            <!-- Inline SVG with precise clickable hotspots that scale responsively -->
+            <svg
+              class="group-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 980 520"
+              role="img"
+              aria-label="Ảnh nhóm 3 thành viên"
+            >
+              <defs>
+                <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#6c8dff" />
+                  <stop offset="100%" stop-color="#a070ff" />
+                </linearGradient>
+                <style>
+                  .bg {
+                    fill: #0f1220;
+                  }
+                  .panel {
+                    fill: #151a2e;
+                  }
+                  .ring {
+                    fill: none;
+                    stroke: #2a3158;
+                    stroke-width: 2;
+                  }
+                  .face {
+                    cursor: pointer;
+                    transition: transform 0.25s ease, filter 0.25s ease;
+                  }
+                  .face:focus {
+                    outline: none;
+                  }
+                  .face:hover {
+                    filter: drop-shadow(0 10px 22px rgba(108, 141, 255, 0.45));
+                    transform: translateY(-2px) scale(1.02);
+                  }
+                  .label {
+                    fill: #e6e9ff;
+                    font: 600 18px "Inter", sans-serif;
+                  }
+                </style>
+              </defs>
+              <rect class="bg" width="980" height="520" rx="24" />
+              <rect
+                class="panel"
+                x="16"
+                y="16"
+                width="948"
+                height="488"
+                rx="20"
+              />
+
+              <!-- Ảnh nhóm nền duy nhất -->
+              <image
+                href="images/group.jpg"
+                x="16"
+                y="-28"
+                width="948"
+                height="560"
+                preserveAspectRatio="xMidYMid slice"
+                opacity="0.98"
+              />
+
+              <!-- Khu vực nhấn: Trái = Thành viên 2 (23120354) -->
+              <a xlink:href="./members/23120354/index.html" tabindex="0">
+                <circle
+                  class="face"
+                  cx="290"
+                  cy="330"
+                  r="92"
+                  fill="rgba(0,0,0,0)"
+                />
+              </a>
+
+              <!-- Khu vực nhấn: Giữa = Thành viên 3 (23120380) -->
+              <a xlink:href="./members/23120380/index.html" tabindex="0">
+                <circle
+                  class="face"
+                  cx="490"
+                  cy="330"
+                  r="98"
+                  fill="rgba(0,0,0,0)"
+                />
+              </a>
+
+              <!-- Khu vực nhấn: Phải = Thành viên 1 (23120355) -->
+              <a xlink:href="./members/23120355/index.html" tabindex="0">
+                <circle
+                  class="face"
+                  cx="710"
+                  cy="330"
+                  r="92"
+                  fill="rgba(0,0,0,0)"
+                />
+              </a>
+            </svg>
+          </div>
+          <div class="img-caption">
+            Nhấp vào từng khuôn mặt để xem thông tin thành viên.
+          </div>
+        </div>
+
+        <aside class="card">
+          <h2 class="panel-title">Đẳng cấp Website</h2>
+          <p class="text-muted">Môn học: Phát triển ứng dụng Web</p>
+          <div class="members mt-12">
+            <div class="member-item">
+              <span class="member-link is-static">Trịnh Hồ Minh Thắng</span>
+              <span class="member-id">23120354</span>
+            </div>
+            <div class="member-item">
+              <span class="member-link is-static">Võ Hữu Thắng</span>
+              <span class="member-id">23120355</span>
+            </div>
+            <div class="member-item">
+              <span class="member-link is-static">Huỳnh Lê Minh Triết</span>
+              <span class="member-id">23120380</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card mt-24" id="members">
+        <h2>Giới thiệu nhóm</h2>
+        <p class="text-muted">
+          Chúng tôi là nhóm sinh viên khoa Công nghệ thông tin trường Đại học
+          Khoa học tự nhiên, ĐHQG - HCM, yêu thích phát triển web theo phong
+          cách hiện đại. Đẳng cấp website - đúng sai tại đẳng cấp.
+        </p>
+      </section>
+
+      <p class="footer">© 2025 Đẳng cấp Website. Built with HTML & CSS.</p>
+    </main>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        var container = document.getElementById("page");
+        requestAnimationFrame(function () {
+          container.classList.add("ready");
+        });
+        // Smooth navigate without new pages: fade out then change location
+        document.querySelectorAll("a").forEach(function (a) {
+          var href = a.getAttribute("href");
+          if (
+            !href ||
+            href.startsWith("#") ||
+            href.startsWith("mailto:") ||
+            href.startsWith("tel:")
+          )
+            return;
+          a.addEventListener("click", function (e) {
+            if (e.ctrlKey || e.metaKey) return; // allow open in new tab
+            e.preventDefault();
+            container.classList.remove("ready");
+            setTimeout(function () {
+              window.location.href = href;
+            }, 220);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

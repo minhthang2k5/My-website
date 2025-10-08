@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6c8dff"/>
+      <stop offset="100%" stop-color="#3cc5f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="36" height="36" rx="8" fill="#0f1220"/>
+  <rect x="1" y="1" width="34" height="34" rx="7" fill="none" stroke="#2a3158"/>
+  <g fill="url(#lg)" transform="translate(4,8)">
+    <!-- 3T monogram -->
+    <path d="M0 0h12v3H7v17H4V3H0z"/>
+    <path d="M15 0h17v3h-7v17h-3V3h-7z"/>
+    <path d="M16 8h12v3h-12z" opacity=".85"/>
+  </g>
+</svg>
+

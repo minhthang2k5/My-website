@@ -1,0 +1,17 @@
+{
+  "name": "dang-cap-website",
+  "version": "1.0.0",
+  "description": "Website nhóm sinh viên IT",
+  "main": "GA2 (1)/default.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - no start needed'"
+  },
+  "keywords": [
+    "website",
+    "student",
+    "it"
+  ],
+  "author": "Đẳng cấp Website",
+  "license": "MIT"
+}

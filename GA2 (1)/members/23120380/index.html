@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thành viên 3 - Huỳnh Lê Minh Triết</title>
+        <link rel="stylesheet" href="../../default.css" />
+    </head>
+    <body>
+        <div class="rings"></div>
+        <div class="orbs">
+            <div class="orb o1"></div>
+            <div class="orb o2"></div>
+            <div class="orb o3"></div>
+            <div class="orb o4"></div>
+            <div class="orb o5"></div>
+        </div>
+        <div class="watermark">FIT HCMUS · CTTT5</div>
+        <div class="binary" aria-hidden="true"></div>
+        <header class="navbar">
+            <div class="brand nowrap">
+                <div class="logo"></div>
+                <div>
+                    <h1>Huỳnh Lê Minh Triết</h1>
+                    <h2>Thành viên nhóm Đẳng cấp Website</h2>
+                </div>
+            </div>
+        </header>
+
+        <main class="container fade-container" id="page">
+            <div class="breadcrumbs">Đẳng cấp Website / Thành viên 3</div>
+            <section class="card profile">
+                <img
+                    class="avatar"
+                    src="images/23120380.jpg"
+                    alt="Ảnh Lê Quốc C"
+                />
+                <div>
+                    <h2>Thông tin cá nhân</h2>
+                    <ul class="info-list">
+                        <li><strong>Họ và tên:</strong> Huỳnh Lê Minh Triết</li>
+                        <li><strong>Mã số sinh viên:</strong> 23120380</li>
+                        <li><strong>Ngày sinh:</strong> 24/12/2005</li>
+                        <li>
+                            <strong>Email:</strong>
+                            huynhleminhtriet5106@gmail.com
+                        </li>
+                        <li><strong>Số điện thoại:</strong> 0387 713 024</li>
+                        <li>
+                            <a class="btn" href="../../default.html"
+                                >Về trang thông tin chung</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="mt-12 text-muted">
+                        Phụ trách backend và hạ tầng. Quan tâm tối ưu hiệu năng
+                        và bảo mật.
+                    </p>
+                    <div class="tag-row mt-6">
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Express</span>
+                        <span class="badge">SQL</span>
+                        <span class="badge">Docker</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            window.addEventListener("DOMContentLoaded", function () {
+                var container = document.getElementById("page");
+                requestAnimationFrame(function () {
+                    container.classList.add("ready");
+                });
+                document.querySelectorAll("a").forEach(function (a) {
+                    var href = a.getAttribute("href");
+                    if (
+                        !href ||
+                        href.startsWith("#") ||
+                        href.startsWith("mailto:") ||
+                        href.startsWith("tel:")
+                    )
+                        return;
+                    a.addEventListener("click", function (e) {
+                        if (e.ctrlKey || e.metaKey) return;
+                        e.preventDefault();
+                        container.classList.remove("ready");
+                        setTimeout(function () {
+                            window.location.href = href;
+                        }, 220);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
